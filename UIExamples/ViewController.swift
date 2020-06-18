@@ -9,12 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    let ALERT_CONTROLLER_CONFIG = (title: "Alert Title", message: "Alert Message")
+    let ALERT_ACTION_TITLE: String = "OK"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func didPressButton(_ sender: Any) {
+        //define alert
+        let alertController = UIAlertController(title: ALERT_CONTROLLER_CONFIG.title, message: ALERT_CONTROLLER_CONFIG.message, preferredStyle: .alert)
+        
+        let alertAction = UIAlertAction(title: ALERT_ACTION_TITLE, style: .cancel) { (action) in
+            print("Done!")
+        }
+        
+        alertController.addAction(alertAction)
+        //shows alert
+        present(alertController, animated: true, completion: nil)
+    }
+    
 }
 
