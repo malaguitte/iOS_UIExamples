@@ -15,30 +15,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJE-IZ-gPH">
-                                <rect key="frame" x="27" y="44" width="33" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJE-IZ-gPH">
+                                <rect key="frame" x="27" y="57" width="33" height="30"/>
                                 <state key="normal" title="Alert"/>
                                 <connections>
                                     <action selector="didPressAlertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tOU-k2-Yhl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPK-fe-dq6">
-                                <rect key="frame" x="27" y="82" width="88" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPK-fe-dq6">
+                                <rect key="frame" x="27" y="95" width="88" height="30"/>
                                 <state key="normal" title="Activity View"/>
                                 <connections>
                                     <action selector="didPressActivityViewButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G3g-1K-hiN"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="r4e-uZ-o8N">
+                                <rect key="frame" x="24" y="184" width="367" height="2"/>
+                            </progressView>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="e0f-IQ-LEh">
+                                <rect key="frame" x="25" y="236" width="368" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="G5V-1b-tXB"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="R57-HF-AZU"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YJE-IZ-gPH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="63d-8x-Lm5"/>
+                            <constraint firstItem="WPK-fe-dq6" firstAttribute="leading" secondItem="e0f-IQ-LEh" secondAttribute="leading" id="Ju0-at-Wdc"/>
+                            <constraint firstItem="e0f-IQ-LEh" firstAttribute="top" secondItem="r4e-uZ-o8N" secondAttribute="bottom" constant="50" id="KDr-fH-WrB"/>
+                            <constraint firstItem="r4e-uZ-o8N" firstAttribute="top" secondItem="WPK-fe-dq6" secondAttribute="bottom" constant="59" id="NyL-9f-BNI"/>
+                            <constraint firstItem="YJE-IZ-gPH" firstAttribute="leading" secondItem="WPK-fe-dq6" secondAttribute="leading" id="ZKr-Hs-4Tc"/>
+                            <constraint firstItem="YJE-IZ-gPH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="cEV-xj-xE3"/>
+                            <constraint firstItem="r4e-uZ-o8N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gw4-z4-uIb"/>
+                            <constraint firstItem="r4e-uZ-o8N" firstAttribute="trailing" secondItem="e0f-IQ-LEh" secondAttribute="trailing" id="n6S-GA-IOu"/>
+                            <constraint firstItem="r4e-uZ-o8N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="sQD-9M-8V7"/>
+                            <constraint firstItem="WPK-fe-dq6" firstAttribute="top" secondItem="YJE-IZ-gPH" secondAttribute="bottom" constant="8" id="sWA-Fz-PzI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="progressView" destination="r4e-uZ-o8N" id="58J-8V-N37"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="121"/>
+            <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
         </scene>
     </scenes>
 </document>

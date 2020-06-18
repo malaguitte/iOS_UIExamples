@@ -13,11 +13,18 @@ class ViewController: UIViewController {
     let ALERT_CONTROLLER_CONFIG = (title: "Alert Title", message: "Alert Message")
     let ALERT_ACTION_TITLE: String = "OK"
     
+    @IBOutlet weak var progressView: UIProgressView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func sliderDidChange(_ sender: UISlider) {
+        //syncing the slider with the progress bar
+        progressView.progress = sender.value
+    }
+    
     @IBAction func didPressActivityViewButton(_ sender: Any) {
         let activityView = UIActivityViewController(activityItems: ["Data From My Application"], applicationActivities: nil)
         present(activityView, animated: true, completion: nil)
