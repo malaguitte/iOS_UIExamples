@@ -12,7 +12,9 @@ class ViewController: UIViewController {
     
     let ALERT_CONTROLLER_CONFIG = (title: "Alert Title", message: "Alert Message")
     let ALERT_ACTION_TITLE: String = "OK"
+    let MAX_PROGRESS: Float = 1.0
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var progressView: UIProgressView!
     
     override func viewDidLoad() {
@@ -23,6 +25,9 @@ class ViewController: UIViewController {
     @IBAction func sliderDidChange(_ sender: UISlider) {
         //syncing the slider with the progress bar
         progressView.progress = sender.value
+        progressView.progress >= MAX_PROGRESS
+            ? activityIndicator.stopAnimating()
+            : activityIndicator.startAnimating()
     }
     
     @IBAction func didPressActivityViewButton(_ sender: Any) {
