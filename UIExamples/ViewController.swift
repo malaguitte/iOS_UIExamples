@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.createCustomButton()
     }
 
     @IBAction func sliderDidChange(_ sender: UISlider) {
@@ -46,6 +47,19 @@ class ViewController: UIViewController {
         alertController.addAction(alertAction)
         //shows alert
         present(alertController, animated: true, completion: nil)
+    }
+    
+    func createCustomButton() {
+        let button = UIButton(type: .system)
+        button.frame = CGRect(x: 200, y: 100, width: 100, height: 20)
+        button.setTitle("My Button", for: .normal)
+        view.addSubview(button)
+        //connect it with our action
+        button.addTarget(self, action: #selector(customButtonWasPressed), for: .touchUpInside)
+    }
+    
+    @objc func customButtonWasPressed(_ sender: UIButton) {
+        print("Custom Button Was Pressed!")
     }
 }
 
