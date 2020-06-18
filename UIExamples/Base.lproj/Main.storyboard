@@ -16,11 +16,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJE-IZ-gPH">
-                                <rect key="frame" x="20" y="44" width="46" height="30"/>
+                                <rect key="frame" x="27" y="44" width="33" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Alert"/>
                                 <connections>
-                                    <action selector="didPressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Za2-T2-xGV"/>
+                                    <action selector="didPressAlertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tOU-k2-Yhl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPK-fe-dq6">
+                                <rect key="frame" x="27" y="82" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Activity View"/>
+                                <connections>
+                                    <action selector="didPressActivityViewButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G3g-1K-hiN"/>
                                 </connections>
                             </button>
                         </subviews>

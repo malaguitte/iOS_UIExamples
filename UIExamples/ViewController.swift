@@ -18,7 +18,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func didPressButton(_ sender: Any) {
+    @IBAction func didPressActivityViewButton(_ sender: Any) {
+        let activityView = UIActivityViewController(activityItems: ["Data From My Application"], applicationActivities: nil)
+        present(activityView, animated: true, completion: nil)
+    }
+    
+    @IBAction func didPressAlertButton(_ sender: Any) {
         //define alert
         let alertController = UIAlertController(title: ALERT_CONTROLLER_CONFIG.title, message: ALERT_CONTROLLER_CONFIG.message, preferredStyle: .alert)
         
@@ -30,6 +35,5 @@ class ViewController: UIViewController {
         //shows alert
         present(alertController, animated: true, completion: nil)
     }
-    
 }
 
