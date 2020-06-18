@@ -35,7 +35,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="e0f-IQ-LEh">
                                 <rect key="frame" x="25" y="236" width="368" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="p9Z-rd-T8g"/>
+                                    <constraint firstAttribute="height" constant="29" id="vBg-ay-ppn"/>
                                 </constraints>
                                 <connections>
                                     <action selector="sliderDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="R57-HF-AZU"/>
@@ -44,37 +44,55 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="lr0-ND-DGv">
                                 <rect key="frame" x="197" y="310" width="20" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="3wI-Ci-aNX"/>
+                                    <constraint firstAttribute="height" constant="20" id="xaD-Vd-sc9"/>
                                 </constraints>
                             </activityIndicatorView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fish" translatesAutoresizingMaskIntoConstraints="NO" id="j0I-OG-sCW">
                                 <rect key="frame" x="87" y="384" width="240" height="128"/>
                             </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2t1-ge-2lx">
+                                <rect key="frame" x="27" y="547" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="UcA-7r-2hb"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxI-Mg-To6">
+                                <rect key="frame" x="134" y="552" width="32" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="j0I-OG-sCW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="05K-rj-316"/>
-                            <constraint firstItem="WPK-fe-dq6" firstAttribute="leading" secondItem="e0f-IQ-LEh" secondAttribute="leading" id="0g3-7T-R6t"/>
-                            <constraint firstItem="lr0-ND-DGv" firstAttribute="top" secondItem="e0f-IQ-LEh" secondAttribute="bottom" constant="45" id="2U3-0a-Bvq"/>
-                            <constraint firstItem="r4e-uZ-o8N" firstAttribute="centerX" secondItem="lr0-ND-DGv" secondAttribute="centerX" id="Azz-Xj-S67"/>
-                            <constraint firstItem="YJE-IZ-gPH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="BQz-W0-O30"/>
-                            <constraint firstItem="e0f-IQ-LEh" firstAttribute="top" secondItem="r4e-uZ-o8N" secondAttribute="bottom" constant="50" id="GN7-Ff-NMr"/>
-                            <constraint firstItem="j0I-OG-sCW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="Gig-iy-L8z"/>
-                            <constraint firstItem="YJE-IZ-gPH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="VDX-cy-jPI"/>
-                            <constraint firstItem="YJE-IZ-gPH" firstAttribute="leading" secondItem="WPK-fe-dq6" secondAttribute="leading" id="WLQ-Tk-5Pm"/>
-                            <constraint firstItem="j0I-OG-sCW" firstAttribute="top" secondItem="lr0-ND-DGv" secondAttribute="bottom" constant="54" id="ZHc-jE-qRf"/>
-                            <constraint firstItem="WPK-fe-dq6" firstAttribute="top" secondItem="YJE-IZ-gPH" secondAttribute="bottom" constant="8" id="ZfR-Pt-fDt"/>
-                            <constraint firstItem="lr0-ND-DGv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="197" id="dGG-Vx-okm"/>
-                            <constraint firstItem="r4e-uZ-o8N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="eKm-kl-aXf"/>
-                            <constraint firstItem="r4e-uZ-o8N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gsX-Bk-N2N"/>
-                            <constraint firstItem="lr0-ND-DGv" firstAttribute="centerX" secondItem="j0I-OG-sCW" secondAttribute="centerX" id="xbS-Je-LXb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j0I-OG-sCW" secondAttribute="bottom" constant="350" id="yID-Z7-6Ow"/>
-                            <constraint firstItem="r4e-uZ-o8N" firstAttribute="trailing" secondItem="e0f-IQ-LEh" secondAttribute="trailing" id="yuP-ac-MfL"/>
+                            <constraint firstItem="e0f-IQ-LEh" firstAttribute="leading" secondItem="2t1-ge-2lx" secondAttribute="leading" id="2Po-rI-WM5"/>
+                            <constraint firstItem="r4e-uZ-o8N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="2pO-33-eaX"/>
+                            <constraint firstItem="YJE-IZ-gPH" firstAttribute="leading" secondItem="WPK-fe-dq6" secondAttribute="leading" id="4ia-kL-bM4"/>
+                            <constraint firstItem="e0f-IQ-LEh" firstAttribute="top" secondItem="r4e-uZ-o8N" secondAttribute="bottom" constant="50" id="5bo-oo-BY6"/>
+                            <constraint firstItem="lr0-ND-DGv" firstAttribute="top" secondItem="e0f-IQ-LEh" secondAttribute="bottom" constant="45" id="ABj-aj-7yb"/>
+                            <constraint firstItem="WPK-fe-dq6" firstAttribute="top" secondItem="YJE-IZ-gPH" secondAttribute="bottom" constant="8" id="D9N-6K-yhC"/>
+                            <constraint firstItem="YJE-IZ-gPH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="EUv-dp-904"/>
+                            <constraint firstItem="WPK-fe-dq6" firstAttribute="leading" secondItem="e0f-IQ-LEh" secondAttribute="leading" id="Jwb-d3-kR2"/>
+                            <constraint firstItem="lr0-ND-DGv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="197" id="KSn-hF-NoL"/>
+                            <constraint firstItem="r4e-uZ-o8N" firstAttribute="top" secondItem="WPK-fe-dq6" secondAttribute="bottom" constant="59" id="Ozs-2u-VbV"/>
+                            <constraint firstItem="r4e-uZ-o8N" firstAttribute="trailing" secondItem="e0f-IQ-LEh" secondAttribute="trailing" id="P4H-ha-A5y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2t1-ge-2lx" secondAttribute="bottom" constant="284" id="PxU-j8-cWB"/>
+                            <constraint firstItem="j0I-OG-sCW" firstAttribute="top" secondItem="lr0-ND-DGv" secondAttribute="bottom" constant="54" id="SMf-YH-zey"/>
+                            <constraint firstItem="cxI-Mg-To6" firstAttribute="leading" secondItem="2t1-ge-2lx" secondAttribute="trailing" constant="58" id="T5P-mg-bQH"/>
+                            <constraint firstItem="r4e-uZ-o8N" firstAttribute="centerX" secondItem="lr0-ND-DGv" secondAttribute="centerX" id="VXn-1K-lVc"/>
+                            <constraint firstItem="YJE-IZ-gPH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="WOl-Uz-faA"/>
+                            <constraint firstItem="j0I-OG-sCW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Zg1-Q5-yqa"/>
+                            <constraint firstItem="cxI-Mg-To6" firstAttribute="top" secondItem="j0I-OG-sCW" secondAttribute="bottom" constant="40" id="a0w-Pe-Orq"/>
+                            <constraint firstItem="r4e-uZ-o8N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bP6-1t-T5A"/>
+                            <constraint firstItem="lr0-ND-DGv" firstAttribute="centerX" secondItem="j0I-OG-sCW" secondAttribute="centerX" id="euY-Pz-dIk"/>
+                            <constraint firstItem="2t1-ge-2lx" firstAttribute="centerY" secondItem="cxI-Mg-To6" secondAttribute="centerY" id="goI-w3-DmV"/>
+                            <constraint firstItem="j0I-OG-sCW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="gvB-go-byC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="lr0-ND-DGv" id="LXh-Wa-6cm"/>
+                        <outlet property="label" destination="cxI-Mg-To6" id="Spr-RQ-rZn"/>
                         <outlet property="progressView" destination="r4e-uZ-o8N" id="58J-8V-N37"/>
                     </connections>
                 </viewController>

@@ -16,11 +16,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.createCustomButton()
+    }
+    
+    @IBAction func switchDidChange(_ sender: UISwitch) {
+        label.text = sender.isOn ? "ON" : "OFF"
     }
 
     @IBAction func sliderDidChange(_ sender: UISlider) {
